@@ -15,5 +15,6 @@ RSpec.describe PostRepository do
     post_repository = PostRepository.new 
     posts = post_repository.find_by_tag('coding')
     expect(posts.first.title).to eq 'How to use Git'
+    expect(posts.length).to eq 2
   end
 end
